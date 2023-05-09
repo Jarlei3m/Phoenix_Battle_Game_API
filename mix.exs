@@ -46,7 +46,8 @@ defmodule ExMon.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:pbkdf2_elixir, "~> 2.1"}
+      {:pbkdf2_elixir, "~> 2.1"},
+      {:tesla, "~> 1.4"}
     ]
   end
 
