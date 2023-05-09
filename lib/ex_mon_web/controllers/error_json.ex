@@ -10,8 +10,12 @@ defmodule ExMonWeb.ErrorJSON do
   # By default, Phoenix returns the status message from
   # the template name. For example, "404.json" becomes
   # "Not Found".
-  def render("400.json", %{result: result}) do
+  def render("400.json", %{result: %Ecto.Changeset{} = result}) do
     %{message: translate_errors(result)}
+  end
+
+  def render("400.json", %{result: message}) do
+    %{message: message}
   end
 
   defp translate_errors(changeset) do
