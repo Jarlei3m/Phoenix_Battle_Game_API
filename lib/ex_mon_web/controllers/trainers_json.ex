@@ -22,12 +22,14 @@ defmodule ExMonWeb.TrainersJSON do
         trainer: %Trainer{
           id: id,
           name: name,
+          pokemon: pokemon,
           inserted_at: inserted_at
         }
       }) do
     %{
       id: id,
       name: name,
+      pokemon: pokemon,
       inserted_at: inserted_at
     }
   end
